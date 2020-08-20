@@ -32,13 +32,19 @@
 
         <div class="form-data">
             <label for="title">Title</label><br/>
-            <input type="text" name="title" id="title" required>
+            <input type="text" name="title" id="title">
         </div>
+        @if($errors->has('title'))
+            <span style="color:red">{{$errors->first('title')}}</span>
+        @endif
 
         <div class="form-data">
             <label for="content">Content</label><br/>
             <textarea name="content" id="content" cols="30" rows="10"></textarea>
         </div>
+        @if($errors->has('content'))
+            <span style="color:red">{{$errors->first('content')}}</span>
+        @endif
 
         <div class="form-data">
             <label for="category">Category</label><br/>
@@ -48,6 +54,9 @@
                 @endforeach
             </select>
         </div>
+        @if($errors->has('category_id'))
+            <span style="color:red">{{$errors->first('category_id')}}</span>
+        @endif
 
         <div class="form-data">
             <label for="tag">Tag</label><br/>
@@ -58,12 +67,18 @@
             
             </select>
         </div>
+        @if($errors->has('tag_id'))
+            <span style="color:red">{{$errors->first('tag_id')}}</span>
+        @endif
 
         <div class="form-data">
             Published or not <br/>
             <input name="published" type="radio" value="1"> <span>yes</span>
             <input name="published" type="radio" value="0"> <span>no</span>
         </div>
+        @if($errors->has('published'))
+            <span style="color:red">{{$errors->first('published')}}</span>
+        @endif
 
         <div class="form-data">
             <button type="submit" class="subBtn">Submit</button>
