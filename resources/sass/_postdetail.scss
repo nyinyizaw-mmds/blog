@@ -1,0 +1,39 @@
+.postdetail{
+    padding:2em;
+    .title{
+        display: flex;
+        h4{
+            font-size:20px;
+        }
+    }
+
+    small{
+        background: #d8e2e2;
+        border: 1px solid #d8e2e2;
+        border-radius: 10px;
+        padding: 0.1em 1em;
+        font-size:10px;
+    }
+
+    p{
+        font-size:13px;
+        margin-top:1em;
+        width:50%;
+    }
+
+    .edit-delete{
+        display:flex;
+
+        .delete{
+            color:red;
+            border:0;
+            background:none;
+
+            &:focus{
+                outline:none;
+            }
+        }
+    }
+
+   
+}

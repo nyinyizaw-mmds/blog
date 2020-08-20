@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.searchForm
+{
+    display: flex;
+    align-items: center;
+
+        .form-data{
+            button{
+                border: 0;
+                background: #91bdec;
+                color: white;
+                padding: 0.1em 1em;
+                border-radius: 5px;
+
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    
+}
